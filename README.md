@@ -15,7 +15,7 @@ Jarvis is a gpt-3.5-turbo integrated Discord bot
 Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/arjuncvinod/jarvis-discord-bot.git
+git clone https://github.com/arjuncvinod/JARVIS-Discord-Bot.git
 ```
 ### Install Dependencies
 
