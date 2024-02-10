@@ -17,7 +17,7 @@ def generate_app_ideas(prompt):
 
 
 def trimmsg(text):
-    return text[:1000]
+    return text[:1800]
 @jarvis.event
 
 async def on_member_join(member):
@@ -32,8 +32,10 @@ async def on_member_join(member):
 async def on_message(message):
     if message.author.bot:
         return
-    await message.reply(trimmsg(generate_app_ideas(message.content)))
     await message.add_reaction("❤️")
+    async with message.channel.typing():
+    	await message.reply(trimmsg(generate_app_ideas(message.content)))
+   		
 
 
 @jarvis.command()
@@ -43,4 +45,3 @@ async def servername(ctx):
 
 
 jarvis.run(decouple.config('TOKEN'))
-
